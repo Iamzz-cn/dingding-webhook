@@ -1,0 +1,32 @@
+{
+  "name": "iamzz-cn/dingding-webhook",
+  "description": "钉钉群机器人SDK",
+  "type": "library",
+  "minimum-stability": "dev",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Iamzz",
+      "email": "iamzz@iamzz.cn"
+    }
+  ],
+  "require": {
+    "php": ">=7.2",
+    "ext-json": "*",
+    "guzzlehttp/guzzle": "^7.0"
+  },
+  "require-dev": {
+    "phpunir/phpunit": "^9.0"
+  },
+  "autoload": {
+    "psr-4": {
+      "Iamzzcn\\": "src/"
+    }
+  },
+  "autoload-dev": {
+    "Iamzzcn\\Tests\\": "tests/"
+  },
+  "scripts": {
+    "unitTest": "php vendor/phpunit/phpunit/phpunit"
+  }
+}
