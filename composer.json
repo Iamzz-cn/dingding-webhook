@@ -24,7 +24,9 @@
     }
   },
   "autoload-dev": {
-    "Iamzzcn\\Tests\\": "tests/"
+    "psr-4": {
+      "Iamzzcn\\Tests\\": "tests/"
+    }
   },
   "scripts": {
     "unitTest": "php vendor/phpunit/phpunit/phpunit"
