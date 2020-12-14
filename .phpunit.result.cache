@@ -1,0 +1,1 @@
+C:37:"PHPUnit\Runner\DefaultTestResultCache":267:{a:2:{s:7:"defects";a:0:{}s:5:"times";a:4:{s:36:"Iamzzcn\Tests\DingdingTest::testSend";d:0.64;s:48:"Iamzzcn\Tests\MsgType\ActionCardTest::testToJson";d:0.035;s:42:"Iamzzcn\Tests\MsgType\LinkTest::testToJson";d:0;s:42:"Iamzzcn\Tests\MsgType\TextTest::testToJson";d:0;}}}
