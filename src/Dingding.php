@@ -10,19 +10,19 @@ use GuzzleHttp\Psr7\Request;
 use Iamzzcn\MsgType\MessageInterface;
 
 /**
- * 钉钉webhook
+ * DINGDING webhook
  * Class Dingding
  * @package Iamzzcn
  */
 class Dingding
 {
     /**
-     * SEC72e4cfc3e4e60f8a3f9b35425924f1dd7f0677e1aed367cfa7098e24ba44f22e
-     * https://oapi.dingtalk.com/robot/send?access_token=4e545098b3b0f09cc34d6755dfb78fd86b0528d8bf557e2c7e47ae7ed5b45aae
+     * http client
      * @var Client
      */
     private $httpClient;
     /**
+     * DINGDING robot api uri
      * @var string
      */
     private $bashUri = 'https://oapi.dingtalk.com/robot/send';
@@ -37,10 +37,10 @@ class Dingding
 
     /**
      * Dingding constructor.
-     * @param string $access_token
-     * @param string $access_key_secret
+     * @param string $access_token 钉钉机器人token
+     * @param string $access_key_secret 钉钉机器人secret key
      */
-    public function __construct($access_token, $access_key_secret = null)
+    public function __construct(string $access_token, $access_key_secret = '')
     {
         $this->httpClient = new Client(['base_uri' => $this->bashUri]);
         $this->accessToken = $access_token;
@@ -49,10 +49,10 @@ class Dingding
 
     /**
      * 计算签名
-     * @param $time int 签名需要的时间戳
+     * @param float $time 签名需要的时间戳
      * @return string
      */
-    private function sign($time)
+    private function sign(float $time)
     {
         return urlencode(base64_encode(hash_hmac('sha256', $time . "\n" . $this->accessKeySecret, $this->accessKeySecret, true)));
     }
@@ -60,6 +60,7 @@ class Dingding
     /**
      * 发送消息
      * @param MessageInterface $message
+     * @return bool
      * @throws GuzzleException
      */
     public function send(MessageInterface $message)
