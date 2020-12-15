@@ -1,13 +1,13 @@
 <?php
 
 
-namespace Iamzzcn\MsgType;
+namespace Iamzz\MsgType;
 
 
 /**
  * 机器人消息接口
  * Interface MessageInterface
- * @package Iamzzcn\MsgType
+ * @package Iamzz\MsgType
  */
 interface MessageInterface
 {

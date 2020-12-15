@@ -1,12 +1,12 @@
 <?php
 
 
-namespace Iamzzcn\MsgType;
+namespace Iamzz\MsgType;
 
 
 /**
  * markdown类型
- * @package Iamzzcn\MsgType
+ * @package Iamzz\MsgType
  */
 class Markdown extends Message implements MessageInterface
 {
@@ -22,10 +22,11 @@ class Markdown extends Message implements MessageInterface
 
     /**
      * Markdown constructor.
+     *
      * @param string $title
      * @param string $text
      */
-    public function __construct($title, $text)
+    public function __construct(string $title, string $text)
     {
         $this->type = 'markdown';
         $this->title = $title;

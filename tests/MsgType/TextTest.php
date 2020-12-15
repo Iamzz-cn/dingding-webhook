@@ -1,13 +1,13 @@
 <?php
 
-namespace Iamzzcn\Tests\MsgType;
+namespace Iamzz\Tests\MsgType;
 
-use Iamzzcn\MsgType\Text;
+use Iamzz\MsgType\Text;
 use PHPUnit\Framework\TestCase;
 
 /**
  * Class TextTest
- * @package Iamzzcn\Tests\MsgType
+ * @package Iamzz\Tests\MsgType
  */
 class TextTest extends TestCase
 {
@@ -17,7 +17,7 @@ class TextTest extends TestCase
         //基础text类型消息测试
         $textObject = new Text('我就是我, 是不一样的烟火');
         $expectedJson = '{"msgtype": "text", "text": {"content": "我就是我, 是不一样的烟火"}}';
-        $this->assertJsonStringEqualsJsonString($expectedJson, $textObject->toJson());
+        static::assertJsonStringEqualsJsonString($expectedJson, $textObject->toJson());
 
         //带有@功能消息测试
         $textObject = new Text('我就是我, 是不一样的烟火{a}');
@@ -25,13 +25,13 @@ class TextTest extends TestCase
             'a' => '188xxxx8888'
         ]);
         $expectedJson = '{"msgtype": "text", "text": {"content": "我就是我, 是不一样的烟火@188xxxx8888"},"at":{"atMobiles":["188xxxx8888"]}}';
-        $this->assertJsonStringEqualsJsonString($expectedJson, $textObject->toJson());
+        static::assertJsonStringEqualsJsonString($expectedJson, $textObject->toJson());
 
         //带有@所有的消息测试
         $textObject = new Text('我就是我, 是不一样的烟火');
         $textObject->setIsAll(true);
         $expectedJson = '{"msgtype": "text", "text": {"content": "我就是我, 是不一样的烟火"},"at":{"isAtAll":true}}';
-        $this->assertJsonStringEqualsJsonString($expectedJson, $textObject->toJson());
+        static::assertJsonStringEqualsJsonString($expectedJson, $textObject->toJson());
 
         //带有@某个人和@所有人消息测试
         $textObject = new Text('我就是我, 是不一样的烟火{a}');
@@ -40,6 +40,6 @@ class TextTest extends TestCase
         ]);
         $textObject->setIsAll(true);
         $expectedJson = '{"msgtype": "text", "text": {"content": "我就是我, 是不一样的烟火@188xxxx8888"},"at":{"atMobiles":["188xxxx8888"],"isAtAll":true}}';
-        $this->assertJsonStringEqualsJsonString($expectedJson, $textObject->toJson());
+        static::assertJsonStringEqualsJsonString($expectedJson, $textObject->toJson());
     }
 }

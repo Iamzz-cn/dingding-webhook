@@ -1,12 +1,12 @@
 <?php
 
 
-namespace Iamzzcn\MsgType;
+namespace Iamzz\MsgType;
 
 
 /**
  * Class Message
- * @package Iamzzcn\MsgType
+ * @package Iamzz\MsgType
  */
 abstract class Message implements MessageInterface
 {
@@ -34,18 +34,20 @@ abstract class Message implements MessageInterface
 
     /**
      * 设置需要at的人，默认只有Text和Markdown支持
+     *
      * @param array $at
      */
-    public function setAtMobiles($at)
+    public function setAtMobiles(array $at)
     {
         $this->atMobiles = $at;
     }
 
     /**
      * 是否at全体成员
+     *
      * @param bool $is_all
      */
-    public function setIsAll($is_all)
+    public function setIsAll(bool $is_all)
     {
         $this->isAll = $is_all;
     }

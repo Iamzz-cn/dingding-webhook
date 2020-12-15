@@ -1,12 +1,12 @@
 <?php
 
 
-namespace Iamzzcn\MsgType;
+namespace Iamzz\MsgType;
 
 
 /**
  * text类型
- * @package Iamzzcn\MsgType
+ * @package Iamzz\MsgType
  */
 class Text extends Message implements MessageInterface
 {
@@ -18,13 +18,14 @@ class Text extends Message implements MessageInterface
 
     /**
      * Text constructor.
+     *
      * @param string $content 消息内容,可以在其中添加{key}的形式便捷填充@信息
-     * 例如
-     * $msg = new Text('text{zhangsan},text{lisi}');
-     * $msg->setAt(['zhangsan'=>'188xxxxxxxx','lisi'=>'188xxxxxxxx']);
-     * 最终消息内容为 text@188xxxxxxxx,text@188xxxxxxxx
+     *                        例如
+     *                        $msg = new Text('text{zhangsan},text{lisi}');
+     *                        $msg->setAt(['zhangsan'=>'188xxxxxxxx','lisi'=>'188xxxxxxxx']);
+     *                        最终消息内容为 text@188xxxxxxxx,text@188xxxxxxxx
      */
-    public function __construct($content)
+    public function __construct(string $content)
     {
         $this->type = 'text';
         $this->content = $content;

@@ -1,12 +1,12 @@
 <?php
 
 
-namespace Iamzzcn\MsgType;
+namespace Iamzz\MsgType;
 
 
 /**
  * 跳转ActionCard类型
- * @package Iamzzcn\MsgType
+ * @package Iamzz\MsgType
  */
 class ActionCard extends Message implements MessageInterface
 {

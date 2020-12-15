@@ -20,12 +20,12 @@
   },
   "autoload": {
     "psr-4": {
-      "Iamzzcn\\": "src/"
+      "Iamzz\\": "src/"
     }
   },
   "autoload-dev": {
     "psr-4": {
-      "Iamzzcn\\Tests\\": "tests/"
+      "Iamzz\\Tests\\": "tests/"
     }
   },
   "scripts": {

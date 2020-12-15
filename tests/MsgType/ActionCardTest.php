@@ -1,13 +1,13 @@
 <?php
 
-namespace Iamzzcn\Tests\MsgType;
+namespace Iamzz\Tests\MsgType;
 
-use Iamzzcn\MsgType\ActionCard;
+use Iamzz\MsgType\ActionCard;
 use PHPUnit\Framework\TestCase;
 
 /**
  * Class ActionCardTest
- * @package Iamzzcn\Tests\MsgType
+ * @package Iamzz\Tests\MsgType
  */
 class ActionCardTest extends TestCase
 {
@@ -30,7 +30,7 @@ class ActionCardTest extends TestCase
                 'singleURL' => 'https://www.dingtalk.com/',
             ]
         ];
-        $this->assertJsonStringEqualsJsonString(json_encode($expected), $actionCardObject->toJson());
+        static::assertJsonStringEqualsJsonString(json_encode($expected), $actionCardObject->toJson());
 
         $actionCardObject = new ActionCard($title, $text, $buttons, true);
         $expected = [
@@ -43,7 +43,7 @@ class ActionCardTest extends TestCase
                 'singleURL' => 'https://www.dingtalk.com/',
             ]
         ];
-        $this->assertJsonStringEqualsJsonString(json_encode($expected), $actionCardObject->toJson());
+        static::assertJsonStringEqualsJsonString(json_encode($expected), $actionCardObject->toJson());
 
         $buttons = [
             '阅读全文1' => 'https://www.dingtalk.com/',
@@ -62,7 +62,7 @@ class ActionCardTest extends TestCase
                 ],
             ]
         ];
-        $this->assertJsonStringEqualsJsonString(json_encode($expected), $actionCardObject->toJson());
+        static::assertJsonStringEqualsJsonString(json_encode($expected), $actionCardObject->toJson());
 
         $actionCardObject = new ActionCard($title, $text, $buttons, true);
         $expected = [
@@ -77,6 +77,6 @@ class ActionCardTest extends TestCase
                 ],
             ]
         ];
-        $this->assertJsonStringEqualsJsonString(json_encode($expected), $actionCardObject->toJson());
+        static::assertJsonStringEqualsJsonString(json_encode($expected), $actionCardObject->toJson());
     }
 }

@@ -1,12 +1,12 @@
 <?php
 
 
-namespace Iamzzcn\MsgType;
+namespace Iamzz\MsgType;
 
 
 /**
  * link类型
- * @package Iamzzcn\MsgType
+ * @package Iamzz\MsgType
  */
 class Link extends Message implements MessageInterface
 {

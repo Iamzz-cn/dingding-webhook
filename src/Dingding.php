@@ -1,18 +1,18 @@
 <?php
 
 
-namespace Iamzzcn;
+namespace Iamzz;
 
 
 use GuzzleHttp\Client;
 use GuzzleHttp\Exception\GuzzleException;
 use GuzzleHttp\Psr7\Request;
-use Iamzzcn\MsgType\MessageInterface;
+use Iamzz\MsgType\MessageInterface;
 
 /**
  * DINGDING webhook
  * Class Dingding
- * @package Iamzzcn
+ * @package Iamzz
  */
 class Dingding
 {
