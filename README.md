@@ -71,7 +71,7 @@ $message = new FeedCard($feedCardData);
 //Send through the `send()` method of the `\Iamzz\Dingding` instance object
 $dd->send($message);
 ```
-* The text and markdown type messages support automatic filling of @ information, for example:
+The text and markdown type messages support automatic filling of @ information, for example:
 ```php
 //如果消息体内需要展示出"{"，请使用"\{"转义。
 use Iamzz\MsgType\Text;$text = new Text('test content {a}');
