@@ -1,17 +1,19 @@
 <?php
 
 
-namespace Iamzz\MsgType;
+namespace Iamzz\Dingtalk\MsgType;
 
 
 /**
  * text类型
- * @package Iamzz\MsgType
+ *
+ * @package Iamzz\Dingtalk\MsgType
  */
 class Text extends Message implements MessageInterface
 {
     /**
      * 消息内容
+     *
      * @var string
      */
     private $content;

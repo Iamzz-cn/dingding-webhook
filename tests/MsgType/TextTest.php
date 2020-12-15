@@ -1,13 +1,13 @@
 <?php
 
-namespace Iamzz\Tests\MsgType;
+namespace Iamzz\Dingtalk\Tests\MsgType;
 
-use Iamzz\MsgType\Text;
+use Iamzz\Dingtalk\MsgType\Text;
 use PHPUnit\Framework\TestCase;
 
 /**
  * Class TextTest
- * @package Iamzz\Tests\MsgType
+ * @package Iamzz\Dingtalk\Tests\MsgType
  */
 class TextTest extends TestCase
 {

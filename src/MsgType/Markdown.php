@@ -1,17 +1,19 @@
 <?php
 
 
-namespace Iamzz\MsgType;
+namespace Iamzz\Dingtalk\MsgType;
 
 
 /**
  * markdown类型
- * @package Iamzz\MsgType
+ *
+ * @package Iamzz\Dingtalk\MsgType
  */
 class Markdown extends Message implements MessageInterface
 {
     /**
      * 首屏会话透出的展示内容
+     *
      * @var string
      */
     private $title;
@@ -35,6 +37,7 @@ class Markdown extends Message implements MessageInterface
 
     /**
      * 最终输出的结构体JSON
+     *
      * @return string
      */
     public function toJson()

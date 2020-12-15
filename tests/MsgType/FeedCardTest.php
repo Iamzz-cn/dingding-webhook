@@ -1,14 +1,14 @@
 <?php
 
-namespace Iamzz\Tests\MsgType;
+namespace Iamzz\Dingtalk\Tests\MsgType;
 
-use Iamzz\MsgType\FeedCard;
+use Iamzz\Dingtalk\MsgType\FeedCard;
 use PHPUnit\Framework\TestCase;
 
 /**
  * Class FeedCardTest
  *
- * @package Iamzz\Tests\MsgType
+ * @package Iamzz\Dingtalk\Tests\MsgType
  */
 class FeedCardTest extends TestCase
 {

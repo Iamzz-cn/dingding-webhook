@@ -1,22 +1,22 @@
 <?php
 
-namespace Iamzz\Tests;
+namespace Iamzz\Dingtalk\Tests;
 
 use GuzzleHttp\Exception\GuzzleException;
-use Iamzz\Dingding;
-use Iamzz\MsgType\ActionCard;
-use Iamzz\MsgType\FeedCard;
-use Iamzz\MsgType\Link;
-use Iamzz\MsgType\Markdown;
-use Iamzz\MsgType\MessageInterface;
-use Iamzz\MsgType\Text;
+use Iamzz\Dingtalk\Dingding;
+use Iamzz\Dingtalk\MsgType\ActionCard;
+use Iamzz\Dingtalk\MsgType\FeedCard;
+use Iamzz\Dingtalk\MsgType\Link;
+use Iamzz\Dingtalk\MsgType\Markdown;
+use Iamzz\Dingtalk\MsgType\MessageInterface;
+use Iamzz\Dingtalk\MsgType\Text;
 use PHPUnit\Framework\TestCase;
 
 /**
  * dingding测试类
  * Class DingdingTest
  *
- * @package Iamzz\Tests
+ * @package Iamzz\Dingtalk\Tests
  */
 class DingdingTest extends TestCase
 {

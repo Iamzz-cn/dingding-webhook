@@ -1,28 +1,31 @@
 <?php
 
 
-namespace Iamzz;
+namespace Iamzz\Dingtalk;
 
 
 use GuzzleHttp\Client;
 use GuzzleHttp\Exception\GuzzleException;
 use GuzzleHttp\Psr7\Request;
-use Iamzz\MsgType\MessageInterface;
+use Iamzz\Dingtalk\MsgType\MessageInterface;
 
 /**
  * DINGDING webhook
  * Class Dingding
+ *
  * @package Iamzz
  */
 class Dingding
 {
     /**
      * http client
+     *
      * @var Client
      */
     private $httpClient;
     /**
      * DINGDING robot api uri
+     *
      * @var string
      */
     private $bashUri = 'https://oapi.dingtalk.com/robot/send';
@@ -37,7 +40,8 @@ class Dingding
 
     /**
      * Dingding constructor.
-     * @param string $access_token 钉钉机器人token
+     *
+     * @param string $access_token      钉钉机器人token
      * @param string $access_key_secret 钉钉机器人secret key
      */
     public function __construct(string $access_token, $access_key_secret = '')
@@ -49,7 +53,9 @@ class Dingding
 
     /**
      * 计算签名
+     *
      * @param float $time 签名需要的时间戳
+     *
      * @return string
      */
     private function sign(float $time)
@@ -59,14 +65,16 @@ class Dingding
 
     /**
      * 发送消息
+     *
      * @param MessageInterface $message
+     *
      * @return bool
      * @throws GuzzleException
      */
     public function send(MessageInterface $message)
     {
         $headers = [
-            'Content-Type' => 'application/json;charset=utf-8'
+            'Content-Type' => 'application/json;charset=utf-8',
         ];
         $request = new Request('POST', '', $headers, $message->toJson());
         $queryData = [

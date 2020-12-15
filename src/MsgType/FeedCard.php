@@ -1,13 +1,13 @@
 <?php
 
 
-namespace Iamzz\MsgType;
+namespace Iamzz\Dingtalk\MsgType;
 
 
 /**
  * FeedCard类型
  *
- * @package Iamzz\MsgType
+ * @package Iamzz\Dingtalk\MsgType
  */
 class FeedCard extends Message implements MessageInterface
 {

@@ -1,12 +1,13 @@
 <?php
 
 
-namespace Iamzz\MsgType;
+namespace Iamzz\Dingtalk\MsgType;
 
 
 /**
  * 跳转ActionCard类型
- * @package Iamzz\MsgType
+ *
+ * @package Iamzz\Dingtalk\MsgType
  */
 class ActionCard extends Message implements MessageInterface
 {
@@ -29,10 +30,11 @@ class ActionCard extends Message implements MessageInterface
 
     /**
      * ActionCard constructor.
-     * @param string $title 首屏会话透出的展示内容
-     * @param string $text markdown格式的消息
-     * @param array $buttons 按钮的标题和点击按钮触发的URL [['title'=>'url']]
-     * @param bool $isVertical 按钮排列方式是否为竖排，默认是横排
+     *
+     * @param string $title      首屏会话透出的展示内容
+     * @param string $text       markdown格式的消息
+     * @param array  $buttons    按钮的标题和点击按钮触发的URL [['title'=>'url']]
+     * @param bool   $isVertical 按钮排列方式是否为竖排，默认是横排
      */
     public function __construct(string $title, string $text, array $buttons, bool $isVertical = false)
     {
@@ -45,6 +47,7 @@ class ActionCard extends Message implements MessageInterface
 
     /**
      * 最终输出的结构体JSON
+     *
      * @return string
      */
     public function toJson()
@@ -64,8 +67,8 @@ class ActionCard extends Message implements MessageInterface
         } else {
             foreach ($this->buttons as $title => $url) {
                 $this->message['actionCard']['btns'][] = [
-                    'title' => $title,
-                    'actionURL' => $url
+                    'title'     => $title,
+                    'actionURL' => $url,
                 ];
             }
         }

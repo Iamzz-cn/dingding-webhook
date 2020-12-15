@@ -1,12 +1,13 @@
 <?php
 
 
-namespace Iamzz\MsgType;
+namespace Iamzz\Dingtalk\MsgType;
 
 
 /**
  * link类型
- * @package Iamzz\MsgType
+ *
+ * @package Iamzz\Dingtalk\MsgType
  */
 class Link extends Message implements MessageInterface
 {
@@ -39,13 +40,14 @@ class Link extends Message implements MessageInterface
 
     /**
      * 最终输出的结构体JSON
+     *
      * @return string
      */
     public function toJson()
     {
         $this->message['link'] = [
-            'title' => $this->title,
-            'text' => $this->text,
+            'title'      => $this->title,
+            'text'       => $this->text,
             'messageUrl' => $this->messageUrl,
         ];
         if ($this->picUrl) {

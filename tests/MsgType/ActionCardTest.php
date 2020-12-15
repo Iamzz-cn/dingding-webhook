@@ -1,13 +1,13 @@
 <?php
 
-namespace Iamzz\Tests\MsgType;
+namespace Iamzz\Dingtalk\Tests\MsgType;
 
-use Iamzz\MsgType\ActionCard;
+use Iamzz\Dingtalk\MsgType\ActionCard;
 use PHPUnit\Framework\TestCase;
 
 /**
  * Class ActionCardTest
- * @package Iamzz\Tests\MsgType
+ * @package Iamzz\Dingtalk\Tests\MsgType
  */
 class ActionCardTest extends TestCase
 {

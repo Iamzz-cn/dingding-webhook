@@ -15,14 +15,14 @@ $ composer require iamzz-cn/dingding-webhook
 ```
 Get the robot's access token through the DingTalk client (pc). It is recommended to sign the security settings (of course you can choose all) to get the access key secret.
 ```php
-use Iamzz\Dingding;
-use Iamzz\MsgType\ActionCard;
-use Iamzz\MsgType\FeedCard;
-use Iamzz\MsgType\Link;
-use Iamzz\MsgType\Markdown;
-use Iamzz\MsgType\Text;
+use Iamzz\Dingtalk\Dingding;
+use Iamzz\Dingtalk\MsgType\ActionCard;
+use Iamzz\Dingtalk\MsgType\FeedCard;
+use Iamzz\Dingtalk\MsgType\Link;
+use Iamzz\Dingtalk\MsgType\Markdown;
+use Iamzz\Dingtalk\MsgType\Text;
 
-//Instantiate an instance of the \Iamzz\Dingding class
+//Instantiate an instance of the \Iamzz\Dingtalk\Dingding class
 $dd = new Dingding('token','secret');
 
 //Instantiate the message type instance
@@ -68,13 +68,13 @@ $feedCardData = [
 ];
 $message = new FeedCard($feedCardData);
 
-//Send through the `send()` method of the `\Iamzz\Dingding` instance object
+//Send through the `send()` method of the `\Iamzz\Dingtalk\Dingding` instance object
 $dd->send($message);
 ```
 The text and markdown type messages support automatic filling of @ information, for example:
 ```php
 //如果消息体内需要展示出"{"，请使用"\{"转义。
-use Iamzz\MsgType\Text;
+use Iamzz\Dingtalk\MsgType\Text;
 $text = new Text('test content {a}');
 $text->setAtMobiles(['a'=>'150xxxxxxxx']);
 ```

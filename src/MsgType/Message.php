@@ -1,33 +1,38 @@
 <?php
 
 
-namespace Iamzz\MsgType;
+namespace Iamzz\Dingtalk\MsgType;
 
 
 /**
  * Class Message
- * @package Iamzz\MsgType
+ *
+ * @package Iamzz\Dingtalk\MsgType
  */
 abstract class Message implements MessageInterface
 {
     /**
      * 消息类型
+     *
      * @var
      */
     protected $type;
     /**
      * 被@人的手机号（在content里添加@人的手机号）
+     *
      * @var array
      */
     protected $atMobiles = [];
     /**
      * 是否@所有人
+     *
      * @var bool
      */
     protected $isAll = false;
 
     /**
      * 最终消息结构体
+     *
      * @var array
      */
     protected $message = [];
@@ -54,6 +59,7 @@ abstract class Message implements MessageInterface
 
     /**
      * 最终输出的结构体JSON
+     *
      * @return string
      */
     public function toJson()
@@ -74,7 +80,9 @@ abstract class Message implements MessageInterface
 
     /**
      * 格式化消息体
+     *
      * @param string $content
+     *
      * @return string
      */
     protected function formatContent(string $content)

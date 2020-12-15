@@ -1,13 +1,13 @@
 <?php
 
-namespace Iamzz\Tests\MsgType;
+namespace Iamzz\Dingtalk\Tests\MsgType;
 
-use Iamzz\MsgType\Link;
+use Iamzz\Dingtalk\MsgType\Link;
 use PHPUnit\Framework\TestCase;
 
 /**
  * Class LinkTest
- * @package Iamzz\Tests\MsgType
+ * @package Iamzz\Dingtalk\Tests\MsgType
  */
 class LinkTest extends TestCase
 {

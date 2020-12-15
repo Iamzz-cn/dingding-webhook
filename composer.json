@@ -20,12 +20,12 @@
   },
   "autoload": {
     "psr-4": {
-      "Iamzz\\": "src/"
+      "Iamzz\\Dingtalk\\": "src/"
     }
   },
   "autoload-dev": {
     "psr-4": {
-      "Iamzz\\Tests\\": "tests/"
+      "Iamzz\\Dingtalk\\Tests\\": "tests/"
     }
   },
   "scripts": {

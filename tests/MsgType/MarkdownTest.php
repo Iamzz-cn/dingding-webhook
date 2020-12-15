@@ -1,13 +1,13 @@
 <?php
 
-namespace Iamzz\Tests\MsgType;
+namespace Iamzz\Dingtalk\Tests\MsgType;
 
-use Iamzz\MsgType\Markdown;
+use Iamzz\Dingtalk\MsgType\Markdown;
 use PHPUnit\Framework\TestCase;
 
 /**
  * Class MarkdownTest
- * @package Iamzz\Tests\MsgType
+ * @package Iamzz\Dingtalk\Tests\MsgType
  */
 class MarkdownTest extends TestCase
 {
