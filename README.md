@@ -74,7 +74,8 @@ $dd->send($message);
 The text and markdown type messages support automatic filling of @ information, for example:
 ```php
 //如果消息体内需要展示出"{"，请使用"\{"转义。
-use Iamzz\MsgType\Text;$text = new Text('test content {a}');
+use Iamzz\MsgType\Text;
+$text = new Text('test content {a}');
 $text->setAtMobiles(['a'=>'150xxxxxxxx']);
 ```
 ## Supported message types
