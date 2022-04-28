@@ -39,11 +39,6 @@ class Dingding
     private $accessKeySecret;
 
     /**
-     * @var array
-     */
-    private $httpOption;
-
-    /**
      * Dingding constructor.
      *
      * @param string $access_token      钉钉机器人token
@@ -51,10 +46,9 @@ class Dingding
      */
     public function __construct(string $access_token, string $access_key_secret = '', array $option = [])
     {
-        $this->httpClient = new Client(['base_uri' => $this->bashUri]);
+        $this->httpClient = new Client(['base_uri' => $this->bashUri] + $option);
         $this->accessToken = $access_token;
         $this->accessKeySecret = $access_key_secret;
-        $this->httpOption = $option;
     }
 
     /**
@@ -91,7 +85,7 @@ class Dingding
             $queryData['timestamp'] = floor(microtime(true) * 1000);
             $queryData['sign'] = $this->sign($queryData['timestamp']);
         }
-        $response = $this->httpClient->send($request, ['query' => $queryData],$this->httpOption);
+        $response = $this->httpClient->send($request, ['query' => $queryData]);
         if ($response->getStatusCode() == 200 and json_decode($response->getBody()->getContents(), true)['errcode'] == 0) {
             return true;
         } else {
